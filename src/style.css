@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-retro-bg text-retro-text font-sans;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 { @apply font-mono; }
+  ::selection { background: #ff1a1a; color: #0d0d0d; }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #0d0d0d; }
+  ::-webkit-scrollbar-thumb { background: #2e2e2e; }
+  ::-webkit-scrollbar-thumb:hover { background: #ff1a1a; }
+}
+
+@layer components {
+  .grain::after {
+    content: '';
+    position: fixed;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+  }
+
+  .glitch { position: relative; display: inline-block; }
+  .glitch::before, .glitch::after {
+    content: attr(data-text);
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    font: inherit; color: inherit;
+  }
+  .glitch::before {
+    color: #ff1a1a;
+    animation: glitch-1 3s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    left: -2px;
+  }
+  .glitch::after {
+    color: #00e5ff;
+    animation: glitch-2 3s infinite;
+    clip-path: polygon(0 66%, 100% 66%, 100% 100%, 0 100%);
+    left: 2px;
+  }
+
+  @keyframes glitch-1 {
+    0%, 90%, 100% { transform: translate(0); opacity: 0; }
+    91% { transform: translate(-3px, 1px); opacity: 0.9; }
+    93% { transform: translate(3px, -1px); opacity: 0.9; }
+    95% { transform: translate(-3px, 1px); opacity: 0.9; }
+    97% { transform: translate(0); opacity: 0; }
+  }
+  @keyframes glitch-2 {
+    0%, 92%, 100% { transform: translate(0); opacity: 0; }
+    93% { transform: translate(3px, -1px); opacity: 0.9; }
+    95% { transform: translate(-3px, 1px); opacity: 0.9; }
+    97% { transform: translate(0); opacity: 0; }
+  }
+
+  .scanlines::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.04) 2px, rgba(0,0,0,0.04) 4px);
+    pointer-events: none; z-index: 1;
+  }
+
+  .btn-retro { @apply font-mono text-sm border px-4 py-2 transition-all duration-150 cursor-pointer; }
+  .btn-retro-primary { @apply btn-retro bg-retro-red text-retro-bg border-retro-red hover:bg-transparent hover:text-retro-red; }
+  .btn-retro-outline { @apply btn-retro bg-transparent text-retro-text border-retro-border hover:border-retro-red hover:text-retro-red; }
+}
