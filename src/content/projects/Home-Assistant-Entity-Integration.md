@@ -5,7 +5,7 @@ tags: [Python, Shell]
 imageUrl: "/projects/Home-Assistant-Entity-Integration.jpg"
 repoUrl: "https://github.com/SCWPretorius/Home-Assistant-Entity-Integration"
 liveUrl: ""
-featured: true
+featured: false
 ---
 
 ## Overview
