@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import ProjectCard from '@/components/projects/ProjectCard.vue'
-import { projects } from '@/data/projects'
+import { useProjects } from '@/composables/useProjects'
 
-const featuredProjects = projects.filter(p => p.featured)
-const otherProjects = projects.filter(p => !p.featured)
+const { projects } = useProjects()
+const featuredProjects = computed(() => projects.value.filter(p => p.featured))
+const otherProjects = computed(() => projects.value.filter(p => !p.featured))
 </script>
 
 <template>

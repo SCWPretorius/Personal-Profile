@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { projects } from '@/data/projects'
+import { computed } from 'vue'
+import { useProjects } from '@/composables/useProjects'
 import { useBlogPosts } from '@/composables/useBlogPosts'
 import ProjectCard from '@/components/projects/ProjectCard.vue'
 import BlogCard from '@/components/blog/BlogCard.vue'
 
+const { projects } = useProjects()
 const { posts } = useBlogPosts()
-const featuredProjects = projects.filter(p => p.featured).slice(0, 3)
-const latestPost = posts.value[0]
+const featuredProjects = computed(() => projects.value.filter(p => p.featured).slice(0, 3))
+const latestPost = computed(() => posts.value[0])
 </script>
 
 <template>

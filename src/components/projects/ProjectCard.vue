@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { Project } from '@/data/projects'
+import type { ProjectMeta } from '@/composables/useProjects'
 import Badge from '@/components/ui/Badge.vue'
 import Card from '@/components/ui/Card.vue'
 
-defineProps<{ project: Project }>()
+defineProps<{ project: ProjectMeta }>()
 </script>
 
 <template>
@@ -20,6 +20,7 @@ defineProps<{ project: Project }>()
       <Badge v-for="tag in project.tags" :key="tag" variant="default">{{ tag }}</Badge>
     </div>
     <div class="flex items-center gap-4 pt-2 border-t border-retro-border">
+      <RouterLink :to="`/projects/${project.slug}`" class="font-mono text-xs text-retro-muted hover:text-retro-red transition-colors">Details ↗</RouterLink>
       <a v-if="project.repoUrl" :href="project.repoUrl" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-retro-muted hover:text-retro-red transition-colors">GitHub ↗</a>
       <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-retro-muted hover:text-retro-red transition-colors">Live ↗</a>
     </div>

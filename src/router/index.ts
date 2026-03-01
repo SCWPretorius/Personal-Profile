@@ -8,6 +8,7 @@ const router = createRouter({
     { path: '/about', name: 'about', component: () => import('@/views/AboutView.vue') },
     { path: '/skills', name: 'skills', component: () => import('@/views/SkillsView.vue') },
     { path: '/projects', name: 'projects', component: () => import('@/views/ProjectsView.vue') },
+    { path: '/projects/:slug', name: 'project-post', component: () => import('@/views/ProjectPostView.vue') },
     { path: '/blog', name: 'blog', component: () => import('@/views/BlogView.vue') },
     { path: '/blog/:slug', name: 'blog-post', component: () => import('@/views/BlogPostView.vue') },
     { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('@/views/NotFoundView.vue') },

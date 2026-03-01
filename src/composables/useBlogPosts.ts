@@ -1,6 +1,7 @@
 import { computed } from 'vue'
 import { marked } from 'marked'
 import DOMPurify from 'dompurify'
+import { parseFrontmatter } from '@/utils/frontmatter'
 
 export interface PostMeta {
   title: string
@@ -13,29 +14,6 @@ export interface PostMeta {
 
 export interface Post extends PostMeta {
   html: string
-}
-
-function parseFrontmatter(raw: string): { data: Record<string, unknown>; content: string } {
-  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/)
-  if (!match) return { data: {}, content: raw }
-
-  const yamlStr = match[1]
-  const content = match[2]
-  const data: Record<string, unknown> = {}
-
-  for (const line of yamlStr.split('\n')) {
-    const colonIdx = line.indexOf(':')
-    if (colonIdx === -1) continue
-    const key = line.slice(0, colonIdx).trim()
-    let value: unknown = line.slice(colonIdx + 1).trim()
-    if (typeof value === 'string' && value.startsWith('[') && value.endsWith(']')) {
-      value = value.slice(1, -1).split(',').map((s) => s.trim().replace(/^["']|["']$/g, '')).filter(Boolean)
-    } else if (typeof value === 'string') {
-      value = value.replace(/^["']|["']$/g, '')
-    }
-    data[key] = value
-  }
-  return { data, content }
 }
 
 const rawModules = import.meta.glob('../content/blog/*.md', { query: '?raw', import: 'default', eager: true }) as Record<string, string>
