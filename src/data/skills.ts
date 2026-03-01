@@ -4,8 +4,24 @@ export interface SkillCategory {
 }
 
 export const skills: SkillCategory[] = [
-  { category: 'Frontend', items: ['Vue 3', 'React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Vite'] },
-  { category: 'Backend', items: ['Node.js', 'Express', 'Python', 'FastAPI', 'REST APIs', 'GraphQL', 'PostgreSQL', 'MongoDB'] },
-  { category: 'DevOps & Tools', items: ['Git', 'Docker', 'CI/CD', 'Linux', 'Nginx', 'GitHub Actions', 'Vercel', 'AWS'] },
-  { category: 'Design & UX', items: ['Figma', 'Accessible Design', 'Responsive Design', 'Design Systems'] },
+  {
+    category: 'Languages & Runtimes',
+    items: ['Go', '.NET / C#', 'Python', 'Java', 'TypeScript', 'JavaScript', 'SQL'],
+  },
+  {
+    category: 'Cloud & Infrastructure',
+    items: ['Microsoft Azure', 'Azure Service Bus', 'Azure Functions', 'Docker', 'CI/CD', 'GitHub Actions', 'Microservices', 'Event-Driven Architecture'],
+  },
+  {
+    category: 'AI & Automation',
+    items: ['LLM Integration', 'AI-Assisted Development', 'Agentic Workflows', 'Prompt Engineering', 'Intelligent Automation', 'Data Pipelines'],
+  },
+  {
+    category: 'Architecture & Leadership',
+    items: ['Distributed Systems', 'System Design', 'Technical Leadership', 'Engineering Mentorship', 'Code Review', 'Backend Architecture', 'API Design', 'REST', 'gRPC / Protocol Buffers'],
+  },
+  {
+    category: 'Data & Backend',
+    items: ['PostgreSQL', 'SQL Server', 'MongoDB', 'Redis', 'GraphQL', 'REST APIs', 'Spring Boot'],
+  },
 ]

@@ -5,8 +5,24 @@ export interface Service {
 }
 
 export const services: Service[] = [
-  { title: 'Web Development', description: 'Full-stack web applications built with modern frameworks. From MVP to production-ready, I handle architecture, implementation, and deployment.', icon: 'Code2' },
-  { title: 'Frontend Engineering', description: 'Pixel-perfect UI implementation, component libraries, and performance optimization. I turn designs into fast, accessible, and maintainable code.', icon: 'Layout' },
-  { title: 'Technical Consulting', description: 'Code reviews, architecture audits, and technology strategy. Get an outside perspective on your codebase and roadmap.', icon: 'Lightbulb' },
-  { title: 'API & Backend', description: 'RESTful and GraphQL APIs, database design, and server-side logic. Built for reliability and scale.', icon: 'Server' },
+  {
+    title: 'Backend Architecture',
+    description: 'Designing and building scalable, distributed backend systems. From event-driven microservices to cloud-native platforms on Azure — pragmatic architecture that ships and scales.',
+    icon: 'Server',
+  },
+  {
+    title: 'AI Integration & Automation',
+    description: 'Integrating LLMs and intelligent automation into real products. From agentic workflows to AI-assisted developer tooling — turning AI capabilities into measurable productivity gains.',
+    icon: 'Cpu',
+  },
+  {
+    title: 'Technical Leadership & Mentoring',
+    description: 'Leading engineering teams, driving technical direction, and growing developers. Code reviews, architectural design sessions, and the hands-on mentorship that builds strong teams.',
+    icon: 'Users',
+  },
+  {
+    title: 'Cloud & Platform Engineering',
+    description: 'Cloud-native development on Microsoft Azure — service design, CI/CD pipelines, infrastructure hardening, and platform reliability. Built for production from day one.',
+    icon: 'Cloud',
+  },
 ]

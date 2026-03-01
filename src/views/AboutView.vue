@@ -2,7 +2,7 @@
 import ProfileCard from '@/components/about/ProfileCard.vue'
 import TimelineItem from '@/components/about/TimelineItem.vue'
 import { experience } from '@/data/experience'
-import { education } from '@/data/education'
+import { education, certifications } from '@/data/education'
 </script>
 
 <template>
@@ -35,12 +35,30 @@ import { education } from '@/data/education'
       </div>
       <TimelineItem
         v-for="item in education"
-        :key="item.institution"
+        :key="item.institution + item.degree"
         :title="item.degree"
         :subtitle="item.institution"
         :period="item.period"
         :description="item.description"
       />
+    </section>
+
+    <section class="mt-16">
+      <div class="flex items-center gap-3 mb-8">
+        <span class="font-mono text-xs text-retro-red">03</span>
+        <h2 class="font-mono text-lg font-bold text-retro-text">Certifications</h2>
+        <div class="flex-1 h-px bg-retro-border"></div>
+      </div>
+      <ul class="space-y-3">
+        <li
+          v-for="cert in certifications"
+          :key="cert"
+          class="flex items-center gap-3 font-mono text-sm text-retro-text"
+        >
+          <span class="text-retro-red select-none">▸</span>
+          {{ cert }}
+        </li>
+      </ul>
     </section>
   </div>
 </template>

@@ -7,15 +7,29 @@ export interface Education {
 
 export const education: Education[] = [
   {
-    institution: 'University of Cape Town',
-    degree: 'BSc Computer Science',
-    period: '2014 — 2018',
-    description: 'Majored in Computer Science with a focus on software engineering and algorithms. Final-year project: a distributed task scheduler built in Go.',
+    institution: 'North-West University / Noordwes-Universiteit',
+    degree: 'Honours Degree B.Sc. — Computer Science and Information Systems',
+    period: '2017',
+    description:
+      'Fields of study: Information Systems Engineering, Computer Security, Decision Support Systems, and Artificial Intelligence.',
   },
   {
-    institution: 'freeCodeCamp / Self-Study',
-    degree: 'Full-Stack Web Development',
-    period: '2017 — 2018',
-    description: 'Completed over 1,200 hours of practical web development training. Earned certifications in Responsive Web Design, JavaScript Algorithms, and APIs.',
+    institution: 'North-West University / Noordwes-Universiteit',
+    degree: 'Bachelor of Science (B.Sc.) — Information Technology',
+    period: '2014 — 2016',
+    description:
+      'Major subjects included: Expert Systems, Artificial Intelligence, Computer Networks, Databases, Data Structures and Algorithms, Operating Systems, Programming (Java), System Analysis and Design, and User Interface Programming (C#, SQL, ASP.NET).',
   },
+  {
+    institution: 'Hoërskool Montana',
+    degree: 'National Senior Certificate (Matric)',
+    period: '2009 — 2013',
+    description: 'National Senior Certification.',
+  },
+]
+
+export const certifications = [
+  'Docker — DevOps',
+  'Microsoft Certified: Azure Fundamentals',
+  'Complete Guide to Protocol Buffers 3 [Java, Golang, Python]',
 ]

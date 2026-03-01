@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Card from '@/components/ui/Card.vue'
-import { Code2, Layout, Lightbulb, Server } from 'lucide-vue-next'
+import { Code2, Layout, Lightbulb, Server, Cpu, Users, Cloud } from 'lucide-vue-next'
 
-const iconMap: Record<string, unknown> = { Code2, Layout, Lightbulb, Server }
+const iconMap: Record<string, unknown> = { Code2, Layout, Lightbulb, Server, Cpu, Users, Cloud }
 
 interface Props {
   title: string
