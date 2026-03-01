@@ -6,8 +6,6 @@ tags: ["work-life balance", "side projects", "developer growth"]
 coverImage: ""
 ---
 
-# Did You Write Code Over the Weekend?
-
 The title of this article might sound controversial in today’s world, where there is an increasing emphasis on work-life balance. Many companies and individuals are advocating for boundaries, with the idea that weekends and personal time should be spent relaxing, recharging, and doing non-work-related activities. But what if I told you that coding over the weekend could actually be part of a healthy work-life balance—especially for those of us who are passionate about technology?
 
 Before you raise an eyebrow, let me clarify: I’m not suggesting that anyone should be pressured into working outside their regular hours or that burnout is a badge of honour. Far from it. Instead, I’m speaking to the software engineers, the tinkerers, and the technologists who find joy in building side projects, exploring new technologies, or solving complex problems in their free time.

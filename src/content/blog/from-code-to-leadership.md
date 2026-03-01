@@ -6,8 +6,6 @@ tags: ["leadership", "career", "mentorship", "technical growth"]
 coverImage: ""
 ---
 
-# From Code to Leadership: My Transition to Technical Team Lead
-
 A quiet thing happened end of last year 2025. I got promoted to Technical Team Lead.
 
 I've spent years buried in code, figuring out how systems should fit together, making things that don't break in six months, jumping on hard problems when the team needed it. Always enjoyed the people side too, unblocking folk, talking through designs and discussing the road map with stakeholders.
