@@ -1,5 +1,2 @@
 /assets/* /assets/:splat 200
 /projects/* /projects/:splat 200
-/favicon.svg /favicon.svg 200
-/headshot.jpeg /headshot.jpeg 200
-/* /index.html 200
