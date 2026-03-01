@@ -2,7 +2,7 @@
 title: "Personal-Profile"
 description: "A personal portfolio and blog built with Vue 3, Vite, and TypeScript, featuring a dark retro/mono aesthetic and markdown-driven content, deployed on Cloudflare Pages."
 tags: [Vue, TypeScript, Tailwind CSS, Vite, Radix Vue, Lucide Vue Next, Vue Router, Cloudflare Pages]
-imageUrl: ""
+imageUrl: "/projects/Personal-Profile.jpg"
 repoUrl: "https://github.com/SCWPretorius/Personal-Profile"
 liveUrl: "https://schalkpretorius.com"
 featured: true
