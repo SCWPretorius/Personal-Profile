@@ -8,7 +8,7 @@ export const profile = {
   email: 'pretorius.scw@gmail.com',
   social: {
     linkedin: 'https://www.linkedin.com/in/schalk-pretorius',
-    github: 'https://github.com/yourusername',
+    github: 'https://github.com/SCWPretorius',
     twitter: '',
   },
   availableForWork: false,

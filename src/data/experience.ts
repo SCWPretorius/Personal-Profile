@@ -61,10 +61,26 @@ export const experience: Experience[] = [
   {
     company: 'Dimension Data',
     role: 'Senior Software Engineer',
-    period: 'June 2018 — February 2020',
+    period: 'March 2019 — February 2020',
     description:
       'Mentored and trained graduate developers while driving the RPA platform migration to the Spring framework, reducing external web server dependencies and deployment time. Implemented a new authentication server enabling multiple social logins. Conducted penetration testing sessions and worked on enterprise integrations.',
     tags: ['Spring Boot', 'RPA', 'Java', 'Security', 'Mentorship'],
+  },
+  {
+    company: 'Dimension Data',
+    role: 'Software Developer',
+    period: 'June 2018 — February 2019',
+    description:
+      'Took a lead role on internal projects within a small team under guidance from a Senior Solution Architect. Developed an Agri-IoT solution for Royal Eswatini Sugar Corporation, streamlining sugarcane processes and conducting simulations for accurate predictions. Contributed to core development of an in-house Robotic Process Automation (RPA) solution, integrating diverse systems and technologies.',
+    tags: ['Java', 'IoT', 'RPA', 'System Integration'],
+  },
+  {
+    company: 'Dimension Data',
+    role: 'Graduate Intern Consultant',
+    period: 'February 2018 — June 2018',
+    description:
+      'Joined as a Graduate Consultant at Britehouse (a Dimension Data company). Researched and implemented technologies to enhance existing projects, focusing on making solutions more generic and modular. Reduced implementation time by decomposing systems into web services and microservices.',
+    tags: ['Java', 'Microservices', 'Web Services', 'Consulting'],
   },
   {
     company: 'Digiata',
